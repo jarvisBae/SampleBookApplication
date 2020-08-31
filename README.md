@@ -28,3 +28,5 @@
 
 ## UnitTest
 Books, BookDetail, 최근검색어 등이 정상적으로 호출 저장되지 체크
+
+## TODO 주석처리 안된 부분 주석추가, 네이밍 체크, serverapi, imagedownload 리팩토링
