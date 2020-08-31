@@ -17,3 +17,14 @@
 ## Demo
 
 ![Recordit GIF](http://g.recordit.co/YfLHsqqIpB.gif)
+
+
+## 프로젝트 폴더 구성
+- Utils: Category(swift extension), 데이터 저장 관련 기능
+- Model : Model
+- Views : Controller -> Page
+- ViewModels : ViewModel
+- Services : ServerAPI, Parse, Cache
+
+## UnitTest
+Books, BookDetail, 최근검색어 등이 정상적으로 호출 저장되지 체크
