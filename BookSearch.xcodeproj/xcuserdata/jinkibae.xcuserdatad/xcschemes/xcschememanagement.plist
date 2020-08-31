@@ -9,10 +9,20 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>BookSearchTests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>9B4B3A8E24F382A500F67A2D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9B84F87E24FD7D9600E43B3A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

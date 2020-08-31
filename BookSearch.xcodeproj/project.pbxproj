@@ -32,7 +32,7 @@
 		9B4B3AF524F7EC4600F67A2D /* BookDetailSummayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4B3AF424F7EC4600F67A2D /* BookDetailSummayCell.m */; };
 		9B4B3AF824F7EC5700F67A2D /* BookDetailDescCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4B3AF724F7EC5700F67A2D /* BookDetailDescCell.m */; };
 		9B84F87A24FD0CC100E43B3A /* MemoPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B84F87924FD0CC100E43B3A /* MemoPage.m */; };
-		9BFCC32524F97D08005912C3 /* BookSearchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BFCC32424F97D08005912C3 /* BookSearchTests.m */; };
+		9B84F8BB24FD839300E43B3A /* BookSearchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B84F8BA24FD839300E43B3A /* BookSearchTests.m */; };
 		9BFCC36F24FA6585005912C3 /* SearchTextViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BFCC36E24FA6585005912C3 /* SearchTextViewModel.m */; };
 		9BFCC37224FA65EE005912C3 /* SearchTextDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BFCC37124FA65EE005912C3 /* SearchTextDisplay.m */; };
 		9BFCC37524FA660E005912C3 /* SearchText.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BFCC37424FA660E005912C3 /* SearchText.m */; };
@@ -41,7 +41,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		9BFCC32724F97D08005912C3 /* PBXContainerItemProxy */ = {
+		9B84F8BD24FD839300E43B3A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9B4B3A8724F382A500F67A2D /* Project object */;
 			proxyType = 1;
@@ -98,9 +98,9 @@
 		9B4B3AF724F7EC5700F67A2D /* BookDetailDescCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookDetailDescCell.m; sourceTree = "<group>"; };
 		9B84F87824FD0CC100E43B3A /* MemoPage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoPage.h; sourceTree = "<group>"; };
 		9B84F87924FD0CC100E43B3A /* MemoPage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoPage.m; sourceTree = "<group>"; };
-		9BFCC32224F97D08005912C3 /* BookSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9BFCC32424F97D08005912C3 /* BookSearchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookSearchTests.m; sourceTree = "<group>"; };
-		9BFCC32624F97D08005912C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B84F8B824FD839300E43B3A /* BookSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B84F8BA24FD839300E43B3A /* BookSearchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookSearchTests.m; sourceTree = "<group>"; };
+		9B84F8BC24FD839300E43B3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BFCC36D24FA6585005912C3 /* SearchTextViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchTextViewModel.h; sourceTree = "<group>"; };
 		9BFCC36E24FA6585005912C3 /* SearchTextViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchTextViewModel.m; sourceTree = "<group>"; };
 		9BFCC37024FA65EE005912C3 /* SearchTextDisplay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchTextDisplay.h; sourceTree = "<group>"; };
@@ -121,7 +121,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9BFCC31F24F97D08005912C3 /* Frameworks */ = {
+		9B84F8B524FD839300E43B3A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -135,7 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				9B4B3A9124F382A500F67A2D /* BookSearch */,
-				9BFCC32324F97D08005912C3 /* BookSearchTests */,
+				9B84F8B924FD839300E43B3A /* BookSearchTests */,
 				9B4B3A9024F382A500F67A2D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -144,7 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				9B4B3A8F24F382A500F67A2D /* BookSearch.app */,
-				9BFCC32224F97D08005912C3 /* BookSearchTests.xctest */,
+				9B84F8B824FD839300E43B3A /* BookSearchTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -152,11 +152,11 @@
 		9B4B3A9124F382A500F67A2D /* BookSearch */ = {
 			isa = PBXGroup;
 			children = (
-				9B4B3ADD24F4F0C900F67A2D /* Category */,
-				9B4B3AAE24F3962200F67A2D /* ViewModel */,
-				9B4B3AAD24F3961500F67A2D /* Model */,
-				9B4B3AAC24F3960A00F67A2D /* Service */,
-				9B4B3AAB24F395FE00F67A2D /* Pages */,
+				9B4B3ADD24F4F0C900F67A2D /* Utils */,
+				9B4B3AAD24F3961500F67A2D /* Models */,
+				9B4B3AAB24F395FE00F67A2D /* Views */,
+				9B4B3AAE24F3962200F67A2D /* ViewModels */,
+				9B4B3AAC24F3960A00F67A2D /* Services */,
 				9B4B3A9224F382A500F67A2D /* AppDelegate.h */,
 				9B4B3A9324F382A500F67A2D /* AppDelegate.m */,
 				9B4B3A9B24F382A500F67A2D /* Main.storyboard */,
@@ -168,7 +168,7 @@
 			path = BookSearch;
 			sourceTree = "<group>";
 		};
-		9B4B3AAB24F395FE00F67A2D /* Pages */ = {
+		9B4B3AAB24F395FE00F67A2D /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				9B4B3AD424F4109000F67A2D /* SearchCells */,
@@ -181,10 +181,10 @@
 				9B84F87824FD0CC100E43B3A /* MemoPage.h */,
 				9B84F87924FD0CC100E43B3A /* MemoPage.m */,
 			);
-			path = Pages;
+			path = Views;
 			sourceTree = "<group>";
 		};
-		9B4B3AAC24F3960A00F67A2D /* Service */ = {
+		9B4B3AAC24F3960A00F67A2D /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				9B4B3AC224F3DBD100F67A2D /* BookDelegate.h */,
@@ -195,10 +195,10 @@
 				9BFCC37624FAC9D8005912C3 /* BookCache.h */,
 				9BFCC37724FAC9D8005912C3 /* BookCache.m */,
 			);
-			path = Service;
+			path = Services;
 			sourceTree = "<group>";
 		};
-		9B4B3AAD24F3961500F67A2D /* Model */ = {
+		9B4B3AAD24F3961500F67A2D /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				9B4B3AC324F3E38D00F67A2D /* BookDisplay.h */,
@@ -214,10 +214,10 @@
 				9BFCC37324FA660E005912C3 /* SearchText.h */,
 				9BFCC37424FA660E005912C3 /* SearchText.m */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		9B4B3AAE24F3962200F67A2D /* ViewModel */ = {
+		9B4B3AAE24F3962200F67A2D /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
 				9B4B3AC424F3E43500F67A2D /* BookViewModel.h */,
@@ -227,7 +227,7 @@
 				9BFCC36D24FA6585005912C3 /* SearchTextViewModel.h */,
 				9BFCC36E24FA6585005912C3 /* SearchTextViewModel.m */,
 			);
-			path = ViewModel;
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		9B4B3AD424F4109000F67A2D /* SearchCells */ = {
@@ -249,7 +249,7 @@
 			path = SearchCells;
 			sourceTree = "<group>";
 		};
-		9B4B3ADD24F4F0C900F67A2D /* Category */ = {
+		9B4B3ADD24F4F0C900F67A2D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				9B4B3ADE24F4F0E300F67A2D /* Functions.h */,
@@ -257,14 +257,14 @@
 				9BFCC37924FAD538005912C3 /* NSCache+Instance.h */,
 				9BFCC37A24FAD538005912C3 /* NSCache+Instance.m */,
 			);
-			path = Category;
+			path = Utils;
 			sourceTree = "<group>";
 		};
-		9BFCC32324F97D08005912C3 /* BookSearchTests */ = {
+		9B84F8B924FD839300E43B3A /* BookSearchTests */ = {
 			isa = PBXGroup;
 			children = (
-				9BFCC32424F97D08005912C3 /* BookSearchTests.m */,
-				9BFCC32624F97D08005912C3 /* Info.plist */,
+				9B84F8BA24FD839300E43B3A /* BookSearchTests.m */,
+				9B84F8BC24FD839300E43B3A /* Info.plist */,
 			);
 			path = BookSearchTests;
 			sourceTree = "<group>";
@@ -289,22 +289,22 @@
 			productReference = 9B4B3A8F24F382A500F67A2D /* BookSearch.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9BFCC32124F97D08005912C3 /* BookSearchTests */ = {
+		9B84F8B724FD839300E43B3A /* BookSearchTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9BFCC32924F97D08005912C3 /* Build configuration list for PBXNativeTarget "BookSearchTests" */;
+			buildConfigurationList = 9B84F8BF24FD839300E43B3A /* Build configuration list for PBXNativeTarget "BookSearchTests" */;
 			buildPhases = (
-				9BFCC31E24F97D08005912C3 /* Sources */,
-				9BFCC31F24F97D08005912C3 /* Frameworks */,
-				9BFCC32024F97D08005912C3 /* Resources */,
+				9B84F8B424FD839300E43B3A /* Sources */,
+				9B84F8B524FD839300E43B3A /* Frameworks */,
+				9B84F8B624FD839300E43B3A /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9BFCC32824F97D08005912C3 /* PBXTargetDependency */,
+				9B84F8BE24FD839300E43B3A /* PBXTargetDependency */,
 			);
 			name = BookSearchTests;
 			productName = BookSearchTests;
-			productReference = 9BFCC32224F97D08005912C3 /* BookSearchTests.xctest */;
+			productReference = 9B84F8B824FD839300E43B3A /* BookSearchTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -320,7 +320,7 @@
 					9B4B3A8E24F382A500F67A2D = {
 						CreatedOnToolsVersion = 11.6;
 					};
-					9BFCC32124F97D08005912C3 = {
+					9B84F8B724FD839300E43B3A = {
 						CreatedOnToolsVersion = 11.6;
 						TestTargetID = 9B4B3A8E24F382A500F67A2D;
 					};
@@ -340,7 +340,7 @@
 			projectRoot = "";
 			targets = (
 				9B4B3A8E24F382A500F67A2D /* BookSearch */,
-				9BFCC32124F97D08005912C3 /* BookSearchTests */,
+				9B84F8B724FD839300E43B3A /* BookSearchTests */,
 			);
 		};
 /* End PBXProject section */
@@ -358,7 +358,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9BFCC32024F97D08005912C3 /* Resources */ = {
+		9B84F8B624FD839300E43B3A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -400,21 +400,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9BFCC31E24F97D08005912C3 /* Sources */ = {
+		9B84F8B424FD839300E43B3A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BFCC32524F97D08005912C3 /* BookSearchTests.m in Sources */,
+				9B84F8BB24FD839300E43B3A /* BookSearchTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		9BFCC32824F97D08005912C3 /* PBXTargetDependency */ = {
+		9B84F8BE24FD839300E43B3A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9B4B3A8E24F382A500F67A2D /* BookSearch */;
-			targetProxy = 9BFCC32724F97D08005912C3 /* PBXContainerItemProxy */;
+			targetProxy = 9B84F8BD24FD839300E43B3A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -582,7 +582,7 @@
 			};
 			name = Release;
 		};
-		9BFCC32A24F97D08005912C3 /* Debug */ = {
+		9B84F8C024FD839300E43B3A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -601,7 +601,7 @@
 			};
 			name = Debug;
 		};
-		9BFCC32B24F97D08005912C3 /* Release */ = {
+		9B84F8C124FD839300E43B3A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -641,11 +641,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9BFCC32924F97D08005912C3 /* Build configuration list for PBXNativeTarget "BookSearchTests" */ = {
+		9B84F8BF24FD839300E43B3A /* Build configuration list for PBXNativeTarget "BookSearchTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9BFCC32A24F97D08005912C3 /* Debug */,
-				9BFCC32B24F97D08005912C3 /* Release */,
+				9B84F8C024FD839300E43B3A /* Debug */,
+				9B84F8C124FD839300E43B3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
