@@ -58,7 +58,7 @@
 #pragma mark - Load Data
 - (void)getBookDetailWithIsbn13:(NSString*)isbn13 {
     __weak BookDetailPage *weakSelf = self;
-    [self.viewModel getBookDetailWithBookId:isbn13 withSuccess:^(BookDetailDisplay * _Nonnull bookDetail) {
+    [self.viewModel getBookDetailWithBookId:isbn13 success:^(BookDetailDisplay * _Nonnull bookDetail) {
         dispatch_async(dispatch_get_main_queue(), ^{
             [weakSelf.tableView reloadData];
         });

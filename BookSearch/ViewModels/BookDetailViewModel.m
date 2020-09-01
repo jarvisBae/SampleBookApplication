@@ -32,9 +32,9 @@
 }
 
 #pragma mark - Load Data
-- (void)getBookDetailWithBookId:(NSString *)isbn13 withSuccess:(void (^)(BookDetailDisplay * _Nonnull))successCompletion error:(void (^)(NSError * _Nonnull))errorCompletion {
+- (void)getBookDetailWithBookId:(NSString *)isbn13 success:(void (^)(BookDetailDisplay * _Nonnull))successCompletion error:(void (^)(NSError * _Nonnull))errorCompletion {
     __weak BookDetailViewModel *weakSelf = self;
-    [self.fetcher fetchBooksWithBookId:isbn13 withSuccess:^(BookDetail * _Nonnull bookDetail) {
+    [self.fetcher fetchBooksWithBookId:isbn13 success:^(BookDetail * _Nonnull bookDetail) {
         weakSelf.bookDetail = [[BookDetailDisplay alloc] initWithBookDetail:bookDetail];
         successCompletion(weakSelf.bookDetail);
     } error:errorCompletion];

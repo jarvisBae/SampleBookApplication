@@ -36,10 +36,10 @@
 }
 
 #pragma mark - Load Data
-- (void)getBooksWithQuery:(NSString *)query page:(NSString *)page withSuccess:(void (^)(NSArray<BookDisplay *> * _Nonnull, NSInteger, NSInteger))successCompletion error:(void (^)(NSError * _Nonnull))errorCompletion {
+- (void)getBooksWithQuery:(NSString *)query page:(NSString *)page success:(void (^)(NSArray<BookDisplay *> * _Nonnull, NSInteger, NSInteger))successCompletion error:(void (^)(NSError * _Nonnull))errorCompletion {
     
     __weak BookViewModel *weakSelf = self;
-    [self.fetcher fetchBooksWithQuery:query page:page isMore:NO withSuccess:^(NSArray<Book *> * _Nonnull books, NSInteger total, NSInteger page) {    
+    [self.fetcher fetchBooksWithQuery:query page:page isMore:NO success:^(NSArray<Book *> * _Nonnull books, NSInteger total, NSInteger page) {
         NSMutableArray * items = [[NSMutableArray alloc] init];
         for (Book *book in books) {
             [items addObject:[[BookDisplay alloc] initWithBook:book]];
@@ -53,12 +53,12 @@
     } error:errorCompletion];
 }
 
-- (void)getBooksLoadmoreWithQuery:(NSString *)query page:(NSString *)page withSuccess:(void (^)(NSArray<BookDisplay *> * _Nonnull, NSInteger, NSInteger))successCompletion error:(void (^)(NSError * _Nonnull))errorCompletion {
+- (void)getBooksLoadmoreWithQuery:(NSString *)query page:(NSString *)page success:(void (^)(NSArray<BookDisplay *> * _Nonnull, NSInteger, NSInteger))successCompletion error:(void (^)(NSError * _Nonnull))errorCompletion {
     
     if (!self.isLoading) {
         self.isLoading = YES;
         __weak BookViewModel *weakSelf = self;
-        [self.fetcher fetchBooksWithQuery:query page:page isMore:YES withSuccess:^(NSArray<Book *> * _Nonnull books, NSInteger total, NSInteger page) {
+        [self.fetcher fetchBooksWithQuery:query page:page isMore:YES success:^(NSArray<Book *> * _Nonnull books, NSInteger total, NSInteger page) {
             NSMutableArray * items = [[NSMutableArray alloc] init];
             for (Book *book in books) {
                 [items addObject:[[BookDisplay alloc] initWithBook:book]];

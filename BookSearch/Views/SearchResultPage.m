@@ -67,7 +67,7 @@
     _searchResultType = type;
     
     __weak SearchResultPage *weakSelf = self;
-    [self.viewModel getBooksWithQuery:query page:[@(page) stringValue] withSuccess:^(NSArray<BookDisplay *> * _Nonnull books, NSInteger total, NSInteger _page) {
+    [self.viewModel getBooksWithQuery:query page:[@(page) stringValue] success:^(NSArray<BookDisplay *> * _Nonnull books, NSInteger total, NSInteger _page) {
         weakSelf.total = total;
         weakSelf.page = _page+1;
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -80,7 +80,7 @@
 
 - (void)loadMore {
     __weak SearchResultPage *weakSelf = self;
-    [self.viewModel getBooksLoadmoreWithQuery:self.query page:[NSString stringWithFormat: @"%ld", (long)self.page] withSuccess:^(NSArray<BookDisplay *> * _Nonnull books, NSInteger total, NSInteger page) {
+    [self.viewModel getBooksLoadmoreWithQuery:self.query page:[NSString stringWithFormat: @"%ld", (long)self.page] success:^(NSArray<BookDisplay *> * _Nonnull books, NSInteger total, NSInteger page) {
         weakSelf.total = total;
         weakSelf.page = page+1;
         dispatch_async(dispatch_get_main_queue(), ^{

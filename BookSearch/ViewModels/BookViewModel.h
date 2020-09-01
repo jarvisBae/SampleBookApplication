@@ -15,13 +15,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)getBooksWithQuery:(NSString *)query
                      page:(NSString*)page
-              withSuccess:(void (^)(NSArray<BookDisplay*> *books, NSInteger total, NSInteger page))successCompletion
+                  success:(void (^)(NSArray<BookDisplay*> *books, NSInteger total, NSInteger page))successCompletion
                     error:(void (^)(NSError *error))errorCompletion;
 
 - (void)getBooksLoadmoreWithQuery:(NSString *)query
-       page:(NSString*)page
-withSuccess:(void (^)(NSArray<BookDisplay*> *books, NSInteger total, NSInteger page))successCompletion
-      error:(void (^)(NSError *error))errorCompletion;
+                             page:(NSString*)page
+                          success:(void (^)(NSArray<BookDisplay*> *books, NSInteger total, NSInteger page))successCompletion
+                            error:(void (^)(NSError *error))errorCompletion;
 
 
 - (void)removeAll;

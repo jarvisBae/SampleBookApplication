@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface BookDetailViewModel : NSObject
 
 - (void)getBookDetailWithBookId:(NSString *)isbn13
-              withSuccess:(void (^)(BookDetailDisplay *bookDetail))successCompletion
+              success:(void (^)(BookDetailDisplay *bookDetail))successCompletion
                     error:(void (^)(NSError *error))errorCompletion;
 
 

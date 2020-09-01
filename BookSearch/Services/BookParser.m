@@ -14,7 +14,7 @@
 @implementation BookParser
 
 #pragma mark - Parse
-- (void)parseBooks:(NSData *)data withSuccess:(void (^)(NSArray<Book *> * _Nonnull, NSInteger, NSInteger))successCompletion error:(void (^)(NSError * _Nonnull))errorCompletion {
+- (void)parseBooks:(NSData *)data success:(void (^)(NSArray<Book *> * _Nonnull, NSInteger, NSInteger))successCompletion error:(void (^)(NSError * _Nonnull))errorCompletion {
     NSError *error;
     NSDictionary * jsonDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
     
@@ -49,7 +49,7 @@
     successCompletion(result, total, page);
 }
 
-- (void)parseBookDetail:(NSData *)data withSuccess:(void (^)(BookDetail * _Nonnull))successCompletion error:(void (^)(NSError * _Nonnull))errorCompletion {
+- (void)parseBookDetail:(NSData *)data success:(void (^)(BookDetail * _Nonnull))successCompletion error:(void (^)(NSError * _Nonnull))errorCompletion {
     NSError *error;
     NSDictionary * jsonDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
     

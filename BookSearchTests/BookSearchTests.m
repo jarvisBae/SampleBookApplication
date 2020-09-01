@@ -40,13 +40,13 @@
     __block NSArray<BookDisplay *> *resultBooksFirst = nil;
     __block NSArray<BookDisplay *> *resultBooksSecond = nil;
     
-    [bookViewModel getBooksWithQuery:@"book" page:@"1" withSuccess:^(NSArray<BookDisplay *> * _Nonnull books, NSInteger total, NSInteger page) {
+    [bookViewModel getBooksWithQuery:@"book" page:@"1" success:^(NSArray<BookDisplay *> * _Nonnull books, NSInteger total, NSInteger page) {
         resultBooksFirst = books;
     } error:^(NSError * _Nonnull error) {
 
     }];
     
-    [bookViewModel getBooksWithQuery:@"book" page:@"2" withSuccess:^(NSArray<BookDisplay *> * _Nonnull books, NSInteger total, NSInteger page) {
+    [bookViewModel getBooksWithQuery:@"book" page:@"2" success:^(NSArray<BookDisplay *> * _Nonnull books, NSInteger total, NSInteger page) {
         resultBooksSecond = books;
     } error:^(NSError * _Nonnull error) {
 
@@ -69,13 +69,13 @@
     __block BookDetailDisplay *bookDetailDisplaySecond;
     
     
-    [bookDetailViewModelFirst getBookDetailWithBookId:isbn13 withSuccess:^(BookDetailDisplay * _Nonnull bookDetail) {
+    [bookDetailViewModelFirst getBookDetailWithBookId:isbn13 success:^(BookDetailDisplay * _Nonnull bookDetail) {
         bookDetailDisplayFirst = bookDetail;
     } error:^(NSError * _Nonnull error) {
         
     }];
     
-    [bookDetailViewModelSecond getBookDetailWithBookId:isbn13 withSuccess:^(BookDetailDisplay * _Nonnull bookDetail) {
+    [bookDetailViewModelSecond getBookDetailWithBookId:isbn13 success:^(BookDetailDisplay * _Nonnull bookDetail) {
         bookDetailDisplaySecond = bookDetail;
     } error:^(NSError * _Nonnull error) {
         
