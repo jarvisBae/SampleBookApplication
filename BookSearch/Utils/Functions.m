@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Functions.h"
 #import <UIKit/UIKit.h>
+#import "NSCache+Instance.h"
 
 @implementation Functions
 
@@ -144,6 +145,35 @@
     [attribute addAttribute:NSForegroundColorAttributeName value:UIColor.blackColor range:range];
     [attribute addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:size weight:UIFontWeightMedium] range:range];
     self.attributedText = attribute;
+}
+
+@end
+
+@implementation UIImageView (UIImageViewDownload)
+
+- (void)imageDownloadWith:(NSString *)imageUrl {
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        UIImage *cacheImage = [NSCache.manager objectForKey:imageUrl];
+        if (cacheImage != nil) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                self.image = cacheImage;
+            });
+        } else {
+            NSURL *url = [NSURL URLWithString:imageUrl];
+            NSURLSessionTask *task = [[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+                if (data) {
+                    UIImage *image = [UIImage imageWithData:data];
+                    if (image) {
+                        dispatch_async(dispatch_get_main_queue(), ^{
+                            [NSCache.manager setObject:image forKey:imageUrl];
+                            self.image = image;
+                        });
+                    }
+                }
+            }];
+            [task resume];
+        }
+    });
 }
 
 @end

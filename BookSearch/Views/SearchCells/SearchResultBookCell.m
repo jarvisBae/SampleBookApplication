@@ -9,6 +9,7 @@
 #import "SearchResultBookCell.h"
 #import "BookDisplay.h"
 #import "NSCache+Instance.h"
+#import "Functions.h"
 
 @implementation SearchResultBookCell
 
@@ -33,28 +34,8 @@
             [self.buttonUrlLink setAttributedTitle:attString forState:UIControlStateNormal];
         }
 
-    
         self.ivBook.image = nil;
-        UIImage *cacheImage = [NSCache.manager objectForKey:display.image];
-        if (cacheImage != nil) {
-            self.ivBook.image = cacheImage;
-        } else {
-            __weak SearchResultBookCell *weakSelf = self;
-            NSURL *url = [NSURL URLWithString:display.image];
-            NSURLSessionTask *task = [[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-                if (data) {
-                    UIImage *image = [UIImage imageWithData:data];
-                    if (image) {
-                        dispatch_async(dispatch_get_main_queue(), ^{
-                            [NSCache.manager setObject:image forKey:display.image];
-                            weakSelf.ivBook.image = image;
-                        });
-                    }
-                }
-            }];
-            [task resume];
-        }
-    
+        [self.ivBook imageDownloadWith:display.image];
 }
 
 - (void)setDisplay:(BookDisplay *)display {
@@ -70,18 +51,12 @@
     }
     
     self.ivBook.image = nil;
-    NSURL *url = [NSURL URLWithString:display.image];
-    NSURLSessionTask *task = [[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        if (data) {
-            UIImage *image = [UIImage imageWithData:data];
-            if (image) {
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    self.ivBook.image = image;
-                });
-            }
-        }
-    }];
-    [task resume];
+    UIImage *cacheImage = [NSCache.manager objectForKey:display.image];
+    if (cacheImage != nil) {
+        self.ivBook.image = cacheImage;
+    } else {
+        [self.ivBook imageDownloadWith:display.image];
+    }
 }
 
 #pragma mark - Button Methods

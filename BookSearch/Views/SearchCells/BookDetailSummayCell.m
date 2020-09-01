@@ -9,6 +9,7 @@
 #import "BookDetailSummayCell.h"
 #import "BookDetailDisplay.h"
 #import "NSCache+Instance.h"
+#import "Functions.h"
 
 @implementation BookDetailSummayCell
 
@@ -31,25 +32,7 @@
     
     
     self.ivImage.image = nil;
-    UIImage *cacheImage = [NSCache.manager objectForKey:display.image];
-    if (cacheImage != nil) {
-        self.ivImage.image = cacheImage;
-    } else {
-        __weak BookDetailSummayCell *weakSelf = self;
-        NSURL *url = [NSURL URLWithString:display.image];
-        NSURLSessionTask *task = [[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-            if (data) {
-                UIImage *image = [UIImage imageWithData:data];
-                if (image) {
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        [NSCache.manager setObject:image forKey:display.image];
-                        weakSelf.ivImage.image = image;
-                    });
-                }
-            }
-        }];
-        [task resume];
-    }
+    [self.ivImage imageDownloadWith:display.image];
 }
 
 @end

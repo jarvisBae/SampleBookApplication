@@ -87,7 +87,6 @@
 
     XCTAssertEqualObjects(bookDetailDisplayFirst, bookDetailDisplayFirst);
     XCTAssertEqualObjects(bookDetailDisplaySecond.isbn13.description, isbn13.description);
-    
 }
 
 - (void)testLocalCacheSaveAndLoad {
@@ -119,8 +118,6 @@
     NSString *savedData = [Functions loadDataFromPlistForKey:saveDataKey];
     
     XCTAssertEqualObjects(saveData, savedData);
-    
 }
-
 
 @end
